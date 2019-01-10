@@ -11,12 +11,13 @@ Using full CDD database:
 ## Samples to test:
  - Negative:
     - No phage sel from data selection
-    - REFSEQ bacterial sequences
+    - REFSEQ bacterial sequences 
     - REFSEQ cellular sequences
  - Positive:
     - REFSEQ viral genomes
     - Selected SRA from data selection
     - crassphage DB
+All the sequences from RefSeq will be filtered by the following cut-off: min 1kbp, max 1Mbp
 
 ## Metrics:
  - Evalue
