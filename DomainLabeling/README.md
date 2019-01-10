@@ -1,22 +1,24 @@
 # Domain Labeling using rpstblastn
 Using full CDD database:
  - rpstblastn with e-value cut-off of 1e-3
+                   bitscore > 50 
  - output in JSON
  - split CDD database in :
     - Viral CDD
-    - Cellular CDD
+    - Cellular (eukaryotic) CDD
     - Prokaryotic CDD
     - mixed CDD
 
 ## Samples to test:
  - Negative:
-    - No phage sel from data selection
-    - REFSEQ bacterial sequences
-    - REFSEQ cellular sequences
+    - No phage selection from data selection team
+    - REFSEQ bacterial sequences (random 100 sequences, chopped in smaller pieces; cut-off: from 1kbp to 1Mbp)
+    - REFSEQ cellular sequences (random 31 sequences belonging to fungi, invertebrate and protozoa)
+    - optional: minimal Bacillus (deletion strains) WGS
  - Positive:
     - REFSEQ viral genomes
     - Selected SRA from data selection
-    - crassphage DB
+    - crassphage DB (the 249 crAss-like phage contigs from Guerin et al., 2018)
 
 ## Metrics:
  - Evalue
@@ -38,6 +40,6 @@ Using full CDD database:
 ##TODO:
  - run RPSTBLN
  - Chop positive control samples from REFSEQ
- - set up jupyter notebook for analysis
- - generate control samples
- - combine JSON formats
+ - set up jupyter notebook for analysis + 
+ - generate control samples + 
+ - combine JSON formats 
